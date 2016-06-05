@@ -135,7 +135,7 @@ int main()
 		voxelsToOutput.clear();
 	}
 
-
+	/*
 
 	fstream readIn;
 	readIn.open("d:\\outOfCore0.bat", ios::in|ios::binary);
@@ -145,7 +145,8 @@ int main()
 	while (readIn.read((char *)&temp, sizeof(octree_info))) {
 		cout << temp.inside_boun << ' ' << temp.in_out << ' ' << temp.morton << endl;
 	}
-
+	readIn.close()
+	*/
 
 
 
