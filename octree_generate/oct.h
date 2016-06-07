@@ -3,13 +3,14 @@
 #include <cmath>
 #include <fstream>
 using namespace std;
-struct octree_info
+class octree_info
 {
+public:
 	long long morton;
 	bool in_out = false;//true is in     false is out
-	bool inside_boun = true;//true is boundary    false is inside
+	bool inside_boun = false;//true is boundary    false is inside
 	//both false is unkonw
-
+	//in_out==false  inside_boun==true means outside
 };
 class oct
 {

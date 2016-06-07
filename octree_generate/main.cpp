@@ -106,14 +106,17 @@ int main()
 				{
 					//cout << j<<' ';
 					tempForPush.in_out = true;
+					tempForPush.inside_boun = true;
 					//cout << ' ' << i ;
 					voxel_number++;
 					voxelsToOutput.push_back(tempForPush);
 					break;
 				}				
 			}
-			if (tempForPush.in_out == false)
+			if (tempForPush.in_out == false) {
+				tempForPush.inside_boun = true;
 				voxelsToOutput.push_back(tempForPush);
+			}
 			//cout << j << ' ';
 		}
 		cout << endl << endl << endl << voxelsToOutput.size();
@@ -135,7 +138,7 @@ int main()
 		voxelsToOutput.clear();
 	}
 
-	/*
+	
 
 	fstream readIn;
 	readIn.open("d:\\outOfCore0.bat", ios::in|ios::binary);
@@ -145,8 +148,8 @@ int main()
 	while (readIn.read((char *)&temp, sizeof(octree_info))) {
 		cout << temp.inside_boun << ' ' << temp.in_out << ' ' << temp.morton << endl;
 	}
-	readIn.close()
-	*/
+	readIn.close();
+	
 
 
 
